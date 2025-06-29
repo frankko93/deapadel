@@ -111,7 +111,15 @@ const translations = {
         'news-6-excerpt': 'Scopri i risultati della terza giornata del ranking interno.',
         
         // Footer
-        'copyright': '© 2025 Franco Aballay'
+        'copyright': '© 2025 Franco Aballay',
+        
+        // WhatsApp messages
+        'whatsapp-reserva': 'Ciao! Vorrei prenotare un campo da padel o una lezione privata. Potete aiutarmi?',
+        'whatsapp-info': 'Ciao! Ho bisogno di informazioni sui vostri servizi. Potete aiutarmi?',
+        'whatsapp-messaggio': 'Ciao! Vorrei inviare un messaggio rapido. Potete aiutarmi?',
+        'whatsapp-contatto': 'Ciao! Vorrei contattarvi per informazioni sui vostri servizi.',
+        'whatsapp-news': 'Ciao! Ho visto le vostre notizie e vorrei saperne di più sui vostri servizi.',
+        'whatsapp-news-footer': 'Ciao! Ho visto le vostre notizie e vorrei contattarvi.'
     },
     
     es: {
@@ -220,7 +228,15 @@ const translations = {
         'news-6-excerpt': 'Descubre los resultados del tercer día de la clasificación interna.',
         
         // Footer
-        'copyright': '© 2025 Franco Aballay'
+        'copyright': '© 2025 Franco Aballay',
+        
+        // WhatsApp messages
+        'whatsapp-reserva': '¡Hola! Me gustaría reservar una pista de pádel o una clase particular. ¿Pueden ayudarme?',
+        'whatsapp-info': '¡Hola! Necesito información sobre sus servicios. ¿Pueden ayudarme?',
+        'whatsapp-messaggio': '¡Hola! Me gustaría enviar un mensaje rápido. ¿Pueden ayudarme?',
+        'whatsapp-contatto': '¡Hola! Me gustaría contactarlos para información sobre sus servicios.',
+        'whatsapp-news': '¡Hola! He visto sus noticias y me gustaría saber más sobre sus servicios.',
+        'whatsapp-news-footer': '¡Hola! He visto sus noticias y me gustaría contactarlos.'
     },
     
     en: {
@@ -329,7 +345,15 @@ const translations = {
         'news-6-excerpt': 'Discover the results of the third day of the internal ranking.',
         
         // Footer
-        'copyright': '© 2025 Franco Aballay'
+        'copyright': '© 2025 Franco Aballay',
+        
+        // WhatsApp messages
+        'whatsapp-reserva': 'Hello! I would like to book a padel court or a private lesson. Can you help me?',
+        'whatsapp-info': 'Hello! I need information about your services. Can you help me?',
+        'whatsapp-messaggio': 'Hello! I would like to send a quick message. Can you help me?',
+        'whatsapp-contatto': 'Hello! I would like to contact you for information about your services.',
+        'whatsapp-news': 'Hello! I have seen your news and would like to know more about your services.',
+        'whatsapp-news-footer': 'Hello! I have seen your news and would like to contact you.'
     }
 };
 
@@ -404,7 +428,7 @@ function changeLanguage(lang) {
     document.querySelector('a[href="#servicios"]').textContent = t['servicios'];
     document.querySelector('a[href="#ubicacion"]').textContent = t['ubicacion'];
     document.querySelector('a[href="#contacto"]').textContent = t['contacto'];
-    document.querySelector('a[href="news/index.html"]').textContent = t['noticias'];
+    document.querySelector('a[href="news/"]').textContent = t['noticias'];
     document.querySelector('.btn-reserva span').textContent = t['reserva-ahora'];
     
     // Hero
@@ -506,6 +530,29 @@ function changeLanguage(lang) {
     
     // Footer
     document.querySelector('.footer-copyright p').textContent = t['copyright'];
+    
+    // Update WhatsApp links with translated messages
+    const whatsappLinks = document.querySelectorAll('a[href*="wa.me"]');
+    whatsappLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href.includes('text=')) {
+            // Determine which type of WhatsApp link this is based on context
+            let messageKey = 'whatsapp-contatto'; // default
+            
+            if (link.classList.contains('btn-reserva')) {
+                messageKey = 'whatsapp-reserva';
+            } else if (link.closest('.contact-option')) {
+                messageKey = 'whatsapp-info';
+            } else if (link.closest('.contacto-link')) {
+                messageKey = 'whatsapp-messaggio';
+            } else if (link.closest('.footer-social')) {
+                messageKey = 'whatsapp-contatto';
+            }
+            
+            const newHref = href.replace(/text=.*?(?=&|$)/, `text=${encodeURIComponent(t[messageKey])}`);
+            link.setAttribute('href', newHref);
+        }
+    });
     
     // Store language preference
     localStorage.setItem('preferred-language', lang);
