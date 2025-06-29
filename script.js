@@ -114,12 +114,12 @@ const translations = {
         'copyright': '© 2025 Franco Aballay',
         
         // WhatsApp messages
-        'whatsapp-reserva': 'Ciao! Vorrei prenotare un campo da padel o una lezione privata. Potete aiutarmi?',
-        'whatsapp-info': 'Ciao! Ho bisogno di informazioni sui vostri servizi. Potete aiutarmi?',
-        'whatsapp-messaggio': 'Ciao! Vorrei inviare un messaggio rapido. Potete aiutarmi?',
-        'whatsapp-contatto': 'Ciao! Vorrei contattarvi per informazioni sui vostri servizi.',
-        'whatsapp-news': 'Ciao! Ho visto le vostre notizie e vorrei saperne di più sui vostri servizi.',
-        'whatsapp-news-footer': 'Ciao! Ho visto le vostre notizie e vorrei contattarvi.'
+        'whatsapp-reserva': 'Ciao! Vorrei prenotare un campo o una lezione. Potete aiutarmi?',
+        'whatsapp-info': 'Ciao! Vorrei informazioni sui vostri servizi. Potete aiutarmi?',
+        'whatsapp-messaggio': 'Ciao! Vorrei informazioni. Potete aiutarmi?',
+        'whatsapp-contatto': 'Ciao! Vorrei contattarvi per informazioni.',
+        'whatsapp-news': 'Ciao! Ho visto le vostre notizie e vorrei informazioni.',
+        'whatsapp-news-footer': 'Ciao! Vorrei contattarvi.'
     },
     
     es: {
@@ -231,12 +231,12 @@ const translations = {
         'copyright': '© 2025 Franco Aballay',
         
         // WhatsApp messages
-        'whatsapp-reserva': '¡Hola! Me gustaría reservar una pista de pádel o una clase particular. ¿Pueden ayudarme?',
-        'whatsapp-info': '¡Hola! Necesito información sobre sus servicios. ¿Pueden ayudarme?',
-        'whatsapp-messaggio': '¡Hola! Me gustaría enviar un mensaje rápido. ¿Pueden ayudarme?',
-        'whatsapp-contatto': '¡Hola! Me gustaría contactarlos para información sobre sus servicios.',
-        'whatsapp-news': '¡Hola! He visto sus noticias y me gustaría saber más sobre sus servicios.',
-        'whatsapp-news-footer': '¡Hola! He visto sus noticias y me gustaría contactarlos.'
+        'whatsapp-reserva': '¡Hola! Me gustaría reservar una pista o una clase. ¿Pueden ayudarme?',
+        'whatsapp-info': '¡Hola! Me gustaría información sobre sus servicios. ¿Pueden ayudarme?',
+        'whatsapp-messaggio': '¡Hola! Me gustaría información. ¿Pueden ayudarme?',
+        'whatsapp-contatto': '¡Hola! Me gustaría contactarlos para información.',
+        'whatsapp-news': '¡Hola! He visto sus noticias y me gustaría información.',
+        'whatsapp-news-footer': '¡Hola! Me gustaría contactarlos.'
     },
     
     en: {
@@ -348,12 +348,12 @@ const translations = {
         'copyright': '© 2025 Franco Aballay',
         
         // WhatsApp messages
-        'whatsapp-reserva': 'Hello! I would like to book a padel court or a private lesson. Can you help me?',
-        'whatsapp-info': 'Hello! I need information about your services. Can you help me?',
-        'whatsapp-messaggio': 'Hello! I would like to send a quick message. Can you help me?',
-        'whatsapp-contatto': 'Hello! I would like to contact you for information about your services.',
-        'whatsapp-news': 'Hello! I have seen your news and would like to know more about your services.',
-        'whatsapp-news-footer': 'Hello! I have seen your news and would like to contact you.'
+        'whatsapp-reserva': 'Hello! I would like to book a court or a lesson. Can you help me?',
+        'whatsapp-info': 'Hello! I would like information about your services. Can you help me?',
+        'whatsapp-messaggio': 'Hello! I would like information. Can you help me?',
+        'whatsapp-contatto': 'Hello! I would like to contact you for information.',
+        'whatsapp-news': 'Hello! I have seen your news and would like information.',
+        'whatsapp-news-footer': 'Hello! I would like to contact you.'
     }
 };
 
@@ -535,7 +535,7 @@ function changeLanguage(lang) {
     const whatsappLinks = document.querySelectorAll('a[href*="wa.me"]');
     whatsappLinks.forEach(link => {
         const href = link.getAttribute('href');
-        if (href.includes('text=')) {
+        if (href.includes('wa.me')) {
             // Determine which type of WhatsApp link this is based on context
             let messageKey = 'whatsapp-contatto'; // default
             
@@ -549,7 +549,8 @@ function changeLanguage(lang) {
                 messageKey = 'whatsapp-contatto';
             }
             
-            const newHref = href.replace(/text=.*?(?=&|$)/, `text=${encodeURIComponent(t[messageKey])}`);
+            // Create new href with translated message
+            const newHref = `https://wa.me/+393519389555?text=${encodeURIComponent(t[messageKey])}`;
             link.setAttribute('href', newHref);
         }
     });
