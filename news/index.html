@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notizie & Novità - DEA Padel</title>
+    <link rel="icon" type="image/png" href="../assets/logo.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <a href="tel:+393519389555">
+                        <i class="fas fa-phone"></i>
+                        <span>+39 351 938 9555</span>
+                    </a>
+                    <a href="mailto:deasrls.padel@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                        <span>deasrls.padel@gmail.com</span>
+                    </a>
+                    <a href="https://maps.app.goo.gl/dgmaEVvcYDqss9wq7" target="_blank">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Via S.Quasimodo, Riposto</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container">
+                <a href="../index.html" class="logo">
+                    <img src="../assets/logo.png" alt="DEA Padel Logo">
+                </a>
+                <nav class="nav">
+                    <ul class="nav-menu">
+                        <li><a href="../index.html#servicios" data-translate="servizi">Servizi</a></li>
+                        <li><a href="../index.html#ubicacion" data-translate="ubicazione">Ubicazione</a></li>
+                        <li><a href="../index.html#contacto" data-translate="contatto">Contatto</a></li>
+                        <li><a href="index.html" class="active" data-translate="noticias">Notizie</a></li>
+                        <li><a href="https://wa.me/+393519389555" target="_blank" class="btn-reserva">
+                            <i class="fab fa-whatsapp"></i>
+                            <span data-translate="prenota-ora">Prenota Ora</span>
+                        </a></li>
+                    </ul>
+                </nav>
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="it">
+                        <span class="flag">🇮🇹</span>
+                        <span class="lang-text">IT</span>
+                    </button>
+                    <button class="lang-btn" data-lang="es">
+                        <span class="flag">🇪🇸</span>
+                        <span class="lang-text">ES</span>
+                    </button>
+                    <button class="lang-btn" data-lang="en">
+                        <span class="flag">🇬🇧</span>
+                        <span class="lang-text">EN</span>
+                    </button>
+                </div>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Categorías -->
+            <aside class="categories-sidebar">
+                <h3 data-translate="filter-all">Tutte le categorie</h3>
+                <ul class="category-list">
+                    <li>
+                        <a href="#" class="active" data-category="todas" data-translate="filter-all">
+                            Tutte le categorie
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-category="equipo" data-translate="filter-team">
+                            <i class="fas fa-users"></i> Squadra
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-category="torneos" data-translate="filter-tournaments">
+                            <i class="fas fa-trophy"></i> Tornei
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-category="promos" data-translate="filter-promos">
+                            <i class="fas fa-tag"></i> Promozioni
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-category="clases" data-translate="filter-lessons">
+                            <i class="fas fa-graduation-cap"></i> Lezioni
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Publicidad -->
+                <div class="sidebar-ad">
+                    <img src="../assets/sponsor1.png" alt="Sponsor 1">
+                </div>
+                <div class="sidebar-ad">
+                    <img src="../assets/sponsor2.png" alt="Sponsor 2">
+                </div>
+                <div class="sidebar-ad">
+                    <img src="../assets/sponsor3.png" alt="Sponsor 3">
+                </div>
+            </aside>
+
+            <!-- Contenido principal -->
+            <div class="news-content">
+                <div class="news-grid">
+                    <!-- Noticia 1 -->
+                    <article class="news-card" data-category="torneos">
+                        <div class="news-image">
+                            <img src="images/portada.jpg" alt="Interclub de Invierno" loading="lazy">
+                            <span class="badge torneos" data-translate="filter-tournaments">Tornei</span>
+                        </div>
+                        <div class="news-content">
+                            <h2 data-translate="news-2-title">Inizia l'Interclub Invernale</h2>
+                            <time class="news-date" datetime="2025-07-01">1 luglio 2025</time>
+                            <p class="news-excerpt" data-translate="news-2-excerpt">Le iscrizioni per il torneo Interclub Invernale sono ora aperte. Un'opportunità unica per competere e migliorare il tuo ranking.</p>
+                            <a href="#" class="read-more" 
+                               data-title="Inizia l'Interclub Invernale"
+                               data-date="2025-07-01"
+                               data-image="images/portada.jpg"
+                               data-description="Le iscrizioni per il torneo Interclub Invernale sono ora aperte. Questo torneo rappresenta un'eccellente opportunità per tutti i giocatori di migliorare il proprio livello di gioco e confrontarsi con altri appassionati. Il torneo si svolgerà durante i mesi invernali, offrendo partite emozionanti e la possibilità di scalare il ranking locale. Non perdere questa occasione di crescita e divertimento nel mondo del padel!"
+                               data-gallery='["images/portada.jpg", "images/portada1.jpg"]'>
+                                <span data-translate="read-more">Leggi di più</span> <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Noticia 2 -->
+                    <article class="news-card" data-category="equipo">
+                        <div class="news-image">
+                            <img src="images/squadra.jpg" alt="Victoria en el torneo regional" loading="lazy">
+                            <span class="badge equipo" data-translate="filter-team">Squadra</span>
+                        </div>
+                        <div class="news-content">
+                            <h3 data-translate="news-1-title">Vittoria nel torneo regionale!</h3>
+                            <time class="news-date" datetime="2025-06-15">15 giugno 2025</time>
+                            <p class="news-excerpt" data-translate="news-1-excerpt">La nostra squadra di DEA Padel ha vinto il torneo regionale della Sicilia, dimostrando un eccellente livello di gioco e lavoro di squadra.</p>
+                            <a href="#" class="read-more"
+                               data-title="Vittoria nel torneo regionale!"
+                               data-date="2025-06-15"
+                               data-image="images/squadra.jpg"
+                               data-description="La nostra squadra di DEA Padel ha ottenuto una straordinaria vittoria nel torneo regionale della Sicilia. Il team ha dimostrato un eccellente livello di gioco e un incredibile spirito di squadra durante tutto il torneo. Questa vittoria non solo conferma il duro lavoro dei nostri atleti, ma stabilisce anche DEA Padel come una delle principali forze nel padel siciliano. Congratulazioni a tutti i membri del team per questo importante traguardo!"
+                               data-gallery='["images/squadra.jpg", "images/squadra.jpg"]'>
+                                <span data-translate="read-more">Leggi di più</span> <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Noticia 3 -->
+                    <article class="news-card" data-category="promos">
+                        <div class="news-image">
+                            <img src="images/promo.jpg" alt="Promoción 2x1" loading="lazy">
+                            <span class="badge promos" data-translate="filter-promos">Promozioni</span>
+                        </div>
+                        <div class="news-content">
+                            <h3 data-translate="news-3-title">2x1 sui campi le domeniche di luglio</h3>
+                            <time class="news-date" datetime="2025-06-28">28 giugno 2025</time>
+                            <p class="news-excerpt" data-translate="news-3-excerpt">Approfitta della nostra promozione speciale: noleggia un campo e ottieni il secondo gratis tutte le domeniche di luglio. Non perdertela!</p>
+                            <a href="#" class="read-more"
+                               data-title="2x1 sui campi le domeniche di luglio"
+                               data-date="2025-06-28"
+                               data-image="images/promo.jpg"
+                               data-description="Approfitta di questa incredibile promozione estiva! Per tutto il mese di luglio, ogni domenica potrai goderti il doppio del padel pagando un solo campo. Prenota un campo e ricevi il secondo completamente gratuito. È l'occasione perfetta per organizzare partite più lunghe, tornei tra amici o sessioni di allenamento prolungate. La promozione è valida per tutte le fasce orarie domenicali, soggetta a disponibilità. Prenota in anticipo per assicurarti il tuo posto!"
+                               data-gallery='["images/promo.jpg", "images/promo.jpg"]'>
+                                <span data-translate="read-more">Leggi di più</span> <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Noticia 4 -->
+                    <article class="news-card" data-category="clases">
+                        <div class="news-image">
+                            <img src="images/scuola-padel.jpg" alt="Cursos para principiantes" loading="lazy">
+                            <span class="badge clases" data-translate="filter-lessons">Lezioni</span>
+                        </div>
+                        <div class="news-content">
+                            <h3 data-translate="news-4-title">Nuovi corsi per principianti</h3>
+                            <time class="news-date" datetime="2025-07-05">5 luglio 2025</time>
+                            <p class="news-excerpt" data-translate="news-4-excerpt">Lanciamo nuovi corsi appositamente progettati per principianti. Impara le tecniche base con i nostri istruttori certificati.</p>
+                            <a href="#" class="read-more"
+                               data-title="Nuovi corsi per principianti"
+                               data-date="2025-07-05"
+                               data-image="images/scuola-padel.jpg"
+                               data-description="Siamo entusiasti di annunciare il lancio dei nostri nuovi corsi per principianti! Questi corsi sono stati accuratamente strutturati per introdurre i nuovi giocatori al meraviglioso mondo del padel. I nostri istruttori certificati ti guideranno attraverso tutte le tecniche fondamentali, dalla corretta impugnatura della racchetta ai movimenti base, fino alle strategie di gioco essenziali. I corsi si terranno in piccoli gruppi per garantire attenzione personalizzata a ogni partecipante. Non è necessaria alcuna esperienza precedente!"
+                               data-gallery='["images/scuola-padel.jpg", "images/scuola-padel.jpg"]'>
+                                <span data-translate="read-more">Leggi di più</span> <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Noticia 5 -->
+                    <article class="news-card" data-category="equipo">
+                        <div class="news-image">
+                            <img src="images/divisa.jpg" alt="Nueva equipación" loading="lazy">
+                            <span class="badge equipo" data-translate="filter-team">Squadra</span>
+                        </div>
+                        <div class="news-content">
+                            <h3 data-translate="news-5-title">Presentiamo la divisa ufficiale 2025-2026</h3>
+                            <time class="news-date" datetime="2025-06-20">20 giugno 2025</time>
+                            <p class="news-excerpt" data-translate="news-5-excerpt">Presentiamo la nostra nuova divisa ufficiale per la stagione 2025-2026. Design moderno e tecnologia all'ultima generazione.</p>
+                            <a href="#" class="read-more"
+                               data-title="Presentiamo la divisa ufficiale 2025-2026"
+                               data-date="2025-06-20"
+                               data-image="images/divisa.jpg"
+                               data-description="È con grande orgoglio che presentiamo la nuova divisa ufficiale DEA Padel per la stagione 2025-2026! Il nuovo design combina eleganza e funzionalità, rappresentando perfettamente i valori del nostro club. Realizzata con materiali di ultima generazione, la divisa offre massimo comfort e prestazioni ottimali in campo. Il tessuto traspirante e leggero garantisce una perfetta regolazione della temperatura corporea durante il gioco. I colori del club sono stati reinterpretati in chiave moderna, creando un look distintivo e professionale."
+                               data-gallery='["images/divisa.jpg", "images/divisa2.jpg"]'>
+                                <span data-translate="read-more">Leggi di più</span> <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Noticia 6 -->
+                    <article class="news-card" data-category="torneos">
+                        <div class="news-image">
+                            <img src="images/torneo.jpg" alt="Resultados ranking" loading="lazy">
+                            <span class="badge torneos" data-translate="filter-tournaments">Tornei</span>
+                        </div>
+                        <div class="news-content">
+                            <h3 data-translate="news-6-title">Ranking interno: risultati della 3ª giornata</h3>
+                            <time class="news-date" datetime="2025-06-22">22 giugno 2025</time>
+                            <p class="news-excerpt" data-translate="news-6-excerpt">Scopri i risultati della terza giornata del ranking interno. Grandi sorprese ed eccellente livello di competizione.</p>
+                            <a href="#" class="read-more"
+                               data-title="Ranking interno: risultati della 3ª giornata"
+                               data-date="2025-06-22"
+                               data-image="images/torneo.jpg"
+                               data-description="La terza giornata del nostro ranking interno si è conclusa con risultati sorprendenti! Il livello di gioco continua a crescere, con partite sempre più avvincenti e competitive. Abbiamo assistito a diversi upset che hanno scosso la classifica, dimostrando che il duro lavoro e la dedizione possono fare la differenza. Particolare menzione per le performance dei nuovi partecipanti che stanno dimostrando un rapido miglioramento. La prossima giornata promette di essere ancora più emozionante!"
+                               data-gallery='["images/torneo.jpg", "images/torneo.jpg"]'>
+                                <span data-translate="read-more">Leggi di più</span> <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal per notizie -->
+    <div id="newsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <time id="modalDate" datetime=""></time>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img id="modalMainImage" src="" alt="">
+                </div>
+                <div id="modalCarousel" class="modal-carousel">
+                    <!-- Las imágenes del carrusel se cargarán dinámicamente -->
+                </div>
+                <p id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../assets/logo.png" alt="DEA Padel Logo">
+            </div>
+            <div class="footer-social">
+                <a href="https://wa.me/+393519389555" target="_blank" class="social-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.instagram.com/dea.padel.riposto/" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/dea.padel.riposto" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </div>
+            <div class="footer-copyright">
+                <a href="https://frankko93.github.io/perfil/" target="_blank">&copy; 2025 Franco Aballay</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

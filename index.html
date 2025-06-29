@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEA Padel - Riposto</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <a href="tel:+393519389555">
+                        <i class="fas fa-phone"></i>
+                        <span>+39 351 938 9555</span>
+                    </a>
+                    <a href="mailto:deasrls.padel@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                        <span>deasrls.padel@gmail.com</span>
+                    </a>
+                    <a href="https://maps.app.goo.gl/dgmaEVvcYDqss9wq7" target="_blank">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Via S.Quasimodo, Riposto</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container">
+                <div class="logo">
+                    <img src="assets/logo.png" alt="DEA Padel Logo">
+                </div>
+                <nav class="nav">
+                    <ul class="nav-menu">
+                        <li><a href="#servicios">Servizi</a></li>
+                        <li><a href="#ubicacion">Ubicazione</a></li>
+                        <li><a href="#contacto">Contatto</a></li>
+                        <li><a href="news/index.html">Noticias</a></li>
+                        <li><a href="https://wa.me/+393519389555" target="_blank" class="btn-reserva">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Prenota Ora</span>
+                        </a></li>
+                    </ul>
+                </nav>
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="it">
+                        <span class="flag">🇮🇹</span>
+                        <span class="lang-text">IT</span>
+                    </button>
+                    <button class="lang-btn" data-lang="es">
+                        <span class="flag">🇪🇸</span>
+                        <span class="lang-text">ES</span>
+                    </button>
+                    <button class="lang-btn" data-lang="en">
+                        <span class="flag">🇬🇧</span>
+                        <span class="lang-text">EN</span>
+                    </button>
+                </div>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Modal de Contacto -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Contacta con Nosotros</h2>
+            <div class="contact-options">
+                <a href="tel:+393519389555" class="contact-option">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h3>Llamar</h3>
+                        <p>+39 351 938 9555</p>
+                    </div>
+                </a>
+                <a href="https://wa.me/+393519389555" target="_blank" class="contact-option">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <h3>WhatsApp</h3>
+                        <p>Chatear ahora</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section id="hero" class="hero">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="assets/hero.mp4" type="video/mp4">
+            </video>
+            <div class="hero-content">
+                <div class="hero-logo">
+                    <img src="assets/logo.png" alt="DEA Padel Logo">
+                </div>
+                <p class="hero-subtitle">Il tuo club di padel a Riposto</p>
+                <div class="hero-cta">
+                    <a href="#" class="cta-button" id="openModal">Prenota il tuo campo</a>
+                    <a href="#servicios" class="cta-button secondary">Scopri di più</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="arrows">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="hero-decoration">
+                <div class="italian-flag-strip green"></div>
+                <div class="italian-flag-strip white"></div>
+                <div class="italian-flag-strip red"></div>
+            </div>
+        </section>
+
+        <section id="servicios" class="servicios">
+            <h2><i class="fas fa-table-tennis-paddle-ball"></i>I Nostri Servizi</h2>
+            <div class="servicios-grid">
+                <div class="servicio">
+                    <div class="servicio-image">
+                        <img src="images/profe.png" alt="Clases Particulares">
+                    </div>
+                    <div class="servicio-content">
+                        <div class="servicio-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h3>Lezioni Private</h3>
+                        <p>Impara con i nostri istruttori certificati e migliora la tua tecnica di gioco. Lezioni personalizzate per tutti i livelli, dai principianti ai giocatori avanzati.</p>
+                        <div class="servicio-features">
+                            <span><i class="fas fa-check"></i> Istruttori certificati</span>
+                            <span><i class="fas fa-check"></i> Lezioni personalizzate</span>
+                            <span><i class="fas fa-check"></i> Tutti i livelli</span>
+                        </div>
+                        <a href="#contacto" class="servicio-link">Prenota la tua lezione <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="servicio">
+                    <div class="servicio-image">
+                        <video autoplay muted loop playsinline class="video-thumbnail">
+                            <source src="assets/hero.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="servicio-content">
+                        <div class="servicio-icon">
+                            <i class="fas fa-table-tennis-paddle-ball"></i>
+                        </div>
+                        <h3>Campi da Padel</h3>
+                        <p>Campi di prima qualità disponibili per tutti i livelli. Superfici professionali e illuminazione ottimale per giocare in qualsiasi momento della giornata.</p>
+                        <div class="servicio-features">
+                            <span><i class="fas fa-check"></i> Superfici professionali</span>
+                            <span><i class="fas fa-check"></i> Illuminazione ottimale</span>
+                            <span><i class="fas fa-check"></i> Prenotazione online</span>
+                        </div>
+                        <a href="#contacto" class="servicio-link">Prenota il tuo campo <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="servicio">
+                    <div class="servicio-image">
+                        <img src="images/torneo.jpg" alt="Tornei">
+                    </div>
+                    <div class="servicio-content">
+                        <div class="servicio-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3>Tornei</h3>
+                        <p>Partecipa ai nostri tornei e competi con altri giocatori. Organizziamo eventi speciali e tornei stagionali per creare un ambiente di gioco divertente e competitivo.</p>
+                        <div class="servicio-features">
+                            <span><i class="fas fa-check"></i> Eventi speciali</span>
+                            <span><i class="fas fa-check"></i> Tornei stagionali</span>
+                            <span><i class="fas fa-check"></i> Ambiente competitivo</span>
+                        </div>
+                        <a href="#contacto" class="servicio-link">Iscriviti <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="servicio">
+                    <div class="servicio-image">
+                        <img src="images/servicios.jpg" alt="Servizi Aggiuntivi">
+                    </div>
+                    <div class="servicio-content">
+                        <div class="servicio-icon">
+                            <i class="fas fa-concierge-bell"></i>
+                        </div>
+                        <h3>Servizi Aggiuntivi</h3>
+                        <p>Goditi tutti i comfort del nostro club. Spogliatoi completi con docce, snack bar con bevande e spuntini, e ampio parcheggio gratuito per la tua comodità.</p>
+                        <div class="servicio-features">
+                            <span><i class="fas fa-check"></i> Spogliatoi con docce</span>
+                            <span><i class="fas fa-check"></i> Snack bar</span>
+                            <span><i class="fas fa-check"></i> Parcheggio gratuito</span>
+                        </div>
+                        <a href="#contacto" class="servicio-link">Scopri di più <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="patrocinadores" class="patrocinadores">
+            <h2><i class="fas fa-trophy"></i>I Nostri Sponsor</h2>
+            <p class="section-subtitle">Grazie ai nostri partner per il supporto e la fiducia</p>
+            <div class="patrocinadores-grid">
+                <div class="patrocinador">
+                    <div class="patrocinador-card">
+                        <div class="patrocinador-logo">
+                            <img src="assets/sponsor1.png" alt="Sponsor 1">
+                        </div>
+                        <div class="patrocinador-info">
+                            <h3>Partner Ufficiale</h3>
+                            <p>Sponsor del club</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="patrocinador">
+                    <div class="patrocinador-card">
+                        <div class="patrocinador-logo">
+                            <img src="assets/sponsor3.png" alt="Sponsor 2">
+                        </div>
+                        <div class="patrocinador-info">
+                            <h3>Partner di Fiducia</h3>
+                            <p>Sponsor del club</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="patrocinador">
+                    <div class="patrocinador-card">
+                        <div class="patrocinador-logo">
+                            <img src="assets/sponsor2.png" alt="Sponsor 3">
+                        </div>
+                        <div class="patrocinador-info">
+                            <h3>Partner Ufficiale</h3>
+                            <p>Sponsor del club</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sponsor-cta">
+                <p>Vuoi diventare nostro sponsor?</p>
+                <a href="#contacto" class="sponsor-btn">
+                    <i class="fas fa-handshake"></i>
+                    <span>Diventa Sponsor</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="ubicacion" class="ubicacion">
+            <h2><i class="fas fa-map-marker-alt"></i>Ubicazione</h2>
+            <div class="ubicacion-container">
+                <div class="ubicacion-info">
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="info-content">
+                            <h3>Indirizzo</h3>
+                            <p>Via S.Quasimodo, Riposto</p>
+                            <a href="https://maps.app.goo.gl/dgmaEVvcYDqss9wq7" target="_blank" class="directions-btn">
+                                <i class="fas fa-directions"></i>
+                                <span>Come arrivare</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <div class="info-content">
+                            <h3>Orari</h3>
+                            <p><strong>Lunedì - Domenica</strong><br>8:00 - 22:00</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-car"></i>
+                        <div class="info-content">
+                            <h3>Parcheggio</h3>
+                            <p>Parcheggio gratuito disponibile</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3155.91525046921!2d15.195907979345705!3d37.72166710000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x131407f44b78dcd5%3A0x25a17d98740952f3!2sDea%20Padel!5e0!3m2!1sen!2sit!4v1751185210026!5m2!1sen!2sit" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contacto">
+            <h2><i class="fas fa-phone-alt"></i>Contatto</h2>
+            <div class="contacto-container">
+                <div class="contacto-info">
+                    <div class="contacto-card">
+                        <div class="contacto-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contacto-content">
+                            <h3>Telefono</h3>
+                            <p>+39 351 938 9555</p>
+                        </div>
+                    </div>
+                    <div class="contacto-card">
+                        <div class="contacto-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contacto-content">
+                            <h3>WhatsApp</h3>
+                            <p>Messaggio rapido</p>
+                            <a href="https://wa.me/+393519389555" target="_blank" class="contacto-link whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>Invia messaggio</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contacto-card">
+                        <div class="contacto-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contacto-content">
+                            <h3>Email</h3>
+                            <p>deasrls.padel@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contacto-card">
+                        <div class="contacto-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="contacto-content">
+                            <h3>Instagram</h3>
+                            <p>@dea.padel.riposto</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacto-form-container">
+                    <h3>Invia un messaggio</h3>
+                    <form class="contacto-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="nombre" placeholder="Nome *" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" placeholder="Email *" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <select id="servicio" required>
+                                <option value="">Seleziona un servizio</option>
+                                <option value="lezione">Lezione Privata</option>
+                                <option value="campo">Noleggio Campo</option>
+                                <option value="torneo">Tornei</option>
+                                <option value="sponsor">Sponsor</option>
+                                <option value="altro">Altro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="mensaje" placeholder="Messaggio *" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Invia Messaggio</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="assets/logo.png" alt="DEA Padel Logo">
+            </div>
+            <div class="footer-social">
+                <a href="https://wa.me/+393519389555" target="_blank" class="social-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.instagram.com/dea.padel.riposto/" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/dea.padel.riposto" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </div>
+            <div class="footer-copyright">
+                <a href="https://frankko93.github.io/perfil/" target="_blank">&copy; 2025 Franco Aballay</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
