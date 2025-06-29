@@ -425,16 +425,26 @@ function changeLanguage(lang) {
     const t = translations[lang];
     
     // Navigation
-    document.querySelector('a[href="#servicios"]').textContent = t['servicios'];
-    document.querySelector('a[href="#ubicacion"]').textContent = t['ubicacion'];
-    document.querySelector('a[href="#contacto"]').textContent = t['contacto'];
-    document.querySelector('a[href="news/"]').textContent = t['noticias'];
-    document.querySelector('.btn-reserva span').textContent = t['reserva-ahora'];
+    const serviciosLink = document.querySelector('a[href="#servicios"]');
+    const ubicacionLink = document.querySelector('a[href="#ubicacion"]');
+    const contactoLink = document.querySelector('a[href="#contacto"]');
+    const noticiasLink = document.querySelector('a[href="news/"]');
+    const reservaBtn = document.querySelector('.btn-reserva span');
+    
+    if (serviciosLink) serviciosLink.textContent = t['servicios'];
+    if (ubicacionLink) ubicacionLink.textContent = t['ubicacion'];
+    if (contactoLink) contactoLink.textContent = t['contacto'];
+    if (noticiasLink) noticiasLink.textContent = t['noticias'];
+    if (reservaBtn) reservaBtn.textContent = t['reserva-ahora'];
     
     // Hero
-    document.querySelector('.hero-subtitle').textContent = t['hero-subtitle'];
-    document.querySelector('#openModal').textContent = t['prenota-campo'];
-    document.querySelector('.cta-button.secondary').textContent = t['scopri-piu'];
+    const heroSubtitle = document.querySelector('.hero-subtitle');
+    const openModalBtn = document.querySelector('#openModal');
+    const scopriBtn = document.querySelector('.cta-button.secondary');
+    
+    if (heroSubtitle) heroSubtitle.textContent = t['hero-subtitle'];
+    if (openModalBtn) openModalBtn.textContent = t['prenota-campo'];
+    if (scopriBtn) scopriBtn.textContent = t['scopri-piu'];
     
     // Services
     document.querySelector('#servicios h2').innerHTML = `<i class="fas fa-table-tennis-paddle-ball"></i>${t['nuestros-servicios']}`;
@@ -529,7 +539,10 @@ function changeLanguage(lang) {
     document.querySelector('.contact-option:nth-child(2) h3').textContent = t['chatear-ahora'];
     
     // Footer
-    document.querySelector('.footer-copyright p').textContent = t['copyright'];
+    const footerCopyright = document.querySelector('.footer-copyright a');
+    if (footerCopyright) {
+        footerCopyright.textContent = t['copyright'];
+    }
     
     // Update WhatsApp links with translated messages
     const whatsappLinks = document.querySelectorAll('a[href*="wa.me"]');
