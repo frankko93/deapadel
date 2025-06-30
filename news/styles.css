@@ -340,7 +340,7 @@
 
 #newsModal .modal-content {
     background: var(--italian-white);
-    margin: 3% auto;
+    margin: 2% auto;
     padding: 0;
     border-radius: 20px;
     width: 90%;
@@ -351,6 +351,10 @@
     overflow: hidden;
     border: 3px solid;
     border-image: var(--gradient-italian) 1;
+    /* Ensure modal fits content properly */
+    max-height: 95vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .close-modal {
@@ -429,8 +433,26 @@
 
 .modal-body {
     padding: 1.2rem;
-    max-height: calc(96vh - 120px);
+    /* Remove max-height constraint to allow full content */
     overflow-y: auto;
+    flex: 1;
+    /* Ensure proper scrolling */
+    scrollbar-width: thin;
+    scrollbar-color: var(--italian-green) transparent;
+}
+
+.modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: var(--light-gray);
+    border-radius: 10px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: var(--gradient-italian);
+    border-radius: 10px;
 }
 
 .modal-image-container {
@@ -470,16 +492,18 @@
 .modal-carousel {
     display: flex;
     gap: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     overflow-x: auto;
-    padding: 1.5rem;
+    padding: 1.2rem;
     scrollbar-width: thin;
     scrollbar-color: var(--italian-green) transparent;
     flex-wrap: nowrap;
     align-items: center;
-    border-radius: 15px;
+    border-radius: 12px;
     background: rgba(0, 0, 0, 0.03);
     border: 1px solid rgba(0, 0, 0, 0.05);
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
 }
 
 .modal-carousel::-webkit-scrollbar {
@@ -496,17 +520,26 @@
     border-radius: 10px;
 }
 
+.carousel-image {
+    flex-shrink: 0;
+    min-width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .modal-carousel img {
-    width: 160px;
-    height: 100px;
+    width: 140px;
+    height: 90px;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
     border: 3px solid transparent;
     box-shadow: var(--shadow-sm);
     flex-shrink: 0;
-    min-width: 160px;
+    min-width: 140px;
+    display: block;
 }
 
 .modal-carousel img:hover {
@@ -568,6 +601,10 @@
     border-radius: 12px;
     border-left: 4px solid var(--primary-blue);
     box-shadow: var(--shadow-sm);
+    /* Ensure text is fully visible */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 /* Modal Navigation Indicators */
@@ -749,82 +786,24 @@
 
     /* Modal responsive improvements */
     #newsModal .modal-content {
-        margin: 2% auto;
+        margin: 1% auto;
         width: 95%;
         max-width: none;
         border-radius: 15px;
         border-width: 2px;
-        max-height: 96vh;
+        max-height: 98vh;
         overflow: hidden;
-    }
-
-    .modal-header {
-        padding: 1.5rem 1.2rem 1rem;
-        border-radius: 15px 15px 0 0;
-        background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #3b82f6 100%);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    }
-
-    .modal-header h2 {
-        font-family: var(--font-heading);
-        font-size: 1.6rem;
-        font-weight: 400;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        line-height: 1.2;
-        color: #ffffff !important;
-        margin-bottom: 0.3rem;
-        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5);
-        position: relative;
-        z-index: 2;
-    }
-
-    .modal-header time {
-        font-size: 0.95rem;
-        color: #ffffff !important;
-        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.5);
-        position: relative;
-        z-index: 2;
+        display: flex;
+        flex-direction: column;
     }
 
     .modal-body {
-        padding: 1.2rem;
-        max-height: calc(96vh - 120px);
+        padding: 1rem;
         overflow-y: auto;
-    }
-
-    .modal-image-container {
-        margin: -1.2rem -1.2rem 1.2rem;
-        height: 280px;
-        border-radius: 0 0 12px 12px;
-    }
-
-    .modal-carousel {
-        display: flex;
-        gap: 1rem;
-        margin-bottom: 1.5rem;
-        overflow-x: auto;
-        padding: 1.2rem;
-        scrollbar-width: thin;
-        scrollbar-color: var(--italian-green) transparent;
-        flex-wrap: nowrap;
-        align-items: center;
-        border-radius: 12px;
-        background: rgba(0, 0, 0, 0.03);
-        border: 1px solid rgba(0, 0, 0, 0.05);
-    }
-
-    .modal-carousel img {
-        width: 140px;
-        height: 90px;
-        object-fit: cover;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        border: 3px solid transparent;
-        box-shadow: var(--shadow-sm);
-        flex-shrink: 0;
-        min-width: 140px;
+        flex: 1;
+        /* Ensure proper scrolling on mobile */
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
     }
 
     .modal-body p {
@@ -834,6 +813,10 @@
         line-height: 1.6;
         background: rgba(255, 255, 255, 0.9);
         border-radius: 10px;
+        /* Ensure text is fully visible on mobile */
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
     }
 
     .close-modal {
@@ -1066,6 +1049,9 @@
         background: rgba(0, 0, 0, 0.03);
         border-radius: 10px;
         border: 1px solid rgba(0, 0, 0, 0.05);
+        /* Force horizontal layout */
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
     }
 
     .modal-carousel img {
@@ -1079,6 +1065,8 @@
         box-shadow: var(--shadow-sm);
         flex-shrink: 0;
         min-width: 120px;
+        /* Force horizontal layout */
+        display: block;
     }
 
     .modal-body p {

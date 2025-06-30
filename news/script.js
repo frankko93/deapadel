@@ -339,10 +339,18 @@ function openModal(event) {
 
     // Limpiar y actualizar carrusel
     modalCarousel.innerHTML = '';
+    
+    // Forzar el display a flex para asegurar layout horizontal
+    modalCarousel.style.display = 'flex';
+    modalCarousel.style.flexDirection = 'row';
+    modalCarousel.style.flexWrap = 'nowrap';
+    
     if (gallery.length > 0) {
         gallery.forEach((imgSrc, index) => {
             const imgContainer = document.createElement('div');
             imgContainer.className = 'carousel-image';
+            imgContainer.style.flexShrink = '0';
+            imgContainer.style.minWidth = '160px';
             
             const img = document.createElement('img');
             img.src = imgSrc;
@@ -379,7 +387,8 @@ function closeModalHandler() {
     modal.classList.remove('show');
     setTimeout(() => {
         modal.style.display = 'none';
-        modalCarousel.style.display = 'block';
+        // Reset carousel display to flex for next time
+        modalCarousel.style.display = 'flex';
     }, 300);
     
     // Restaurar scroll del body
