@@ -646,6 +646,51 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Simple initialization of other features
     initBasicFeatures();
+
+    // Formulario de contacto con feedback visual
+    const contactoForm = document.querySelector('.contacto-form');
+    const formModal = document.getElementById('formModal');
+    const formModalTitle = document.getElementById('formModalTitle');
+    const formModalMsg = document.getElementById('formModalMsg');
+    const closeFormModal = document.getElementById('closeFormModal');
+
+    if (contactoForm && formModal) {
+        contactoForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(contactoForm);
+            fetch(contactoForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            })
+            .then(response => {
+                if (response.ok) {
+                    formModalTitle.textContent = 'Messaggio inviato!';
+                    formModalMsg.textContent = 'Grazie per averci contattato. Ti risponderemo al più presto.';
+                    contactoForm.reset();
+                } else {
+                    formModalTitle.textContent = 'Errore';
+                    formModalMsg.textContent = 'Si è verificato un errore nell\'invio. Riprova più tardi.';
+                }
+                formModal.style.display = 'block';
+            })
+            .catch(() => {
+                formModalTitle.textContent = 'Errore';
+                formModalMsg.textContent = 'Si è verificato un errore di connessione. Riprova più tardi.';
+                formModal.style.display = 'block';
+            });
+        });
+        // Cerrar modal al hacer clic en la X
+        closeFormModal.addEventListener('click', function() {
+            formModal.style.display = 'none';
+        });
+        // Cerrar modal al hacer clic fuera del contenido
+        window.addEventListener('click', function(e) {
+            if (e.target === formModal) {
+                formModal.style.display = 'none';
+            }
+        });
+    }
 });
 
 // Basic features initialization

@@ -3,7 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DEA Padel - Riposto</title>
+    <title>DEA Padel - Club di Padel a Riposto, Sicilia</title>
+    <meta name="description" content="DEA Padel è il circolo di padel di riferimento a Riposto, Sicilia. Prenota campi, lezioni private, partecipa a tornei e scopri tutte le novità del club.">
+    <meta name="keywords" content="padel, Sicilia, Riposto, club padel, tornei padel, lezioni padel, DEA Padel, prenotazione campi, eventi padel, promozioni padel">
+    <meta name="author" content="DEA Padel">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deapadel.it/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="DEA Padel - Club di Padel a Riposto, Sicilia">
+    <meta property="og:description" content="Prenota campi, lezioni private, partecipa a tornei e scopri tutte le novità di DEA Padel a Riposto, Sicilia.">
+    <meta property="og:image" content="https://deapadel.it/assets/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deapadel.it/">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DEA Padel - Club di Padel a Riposto, Sicilia">
+    <meta name="twitter:description" content="Prenota campi, lezioni private, partecipa a tornei e scopri tutte le novità di DEA Padel a Riposto, Sicilia.">
+    <meta name="twitter:image" content="https://deapadel.it/assets/logo.png">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsClub",
+      "name": "DEA Padel",
+      "url": "https://deapadel.it/",
+      "logo": "https://deapadel.it/assets/logo.png",
+      "image": "https://deapadel.it/assets/logo.png",
+      "description": "DEA Padel è il circolo di padel di riferimento a Riposto, Sicilia. Prenota campi, lezioni private, partecipa a tornei e scopri tutte le novità del club.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Via S.Quasimodo",
+        "addressLocality": "Riposto",
+        "addressRegion": "CT",
+        "postalCode": "95018",
+        "addressCountry": "IT"
+      },
+      "telephone": "+39 351 938 9555",
+      "email": "deasrls.padel@gmail.com"
+    }
+    </script>
+
     <link rel="icon" type="image/png" href="assets/logo.png">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -341,17 +383,17 @@
                 </div>
                 <div class="contacto-form-container">
                     <h3>Invia un messaggio</h3>
-                    <form class="contacto-form">
+                    <form class="contacto-form" action="https://formspree.io/f/xgvydenp" method="POST">
                         <div class="form-row">
                             <div class="form-group">
-                                <input type="text" id="nombre" placeholder="Nome *" required>
+                                <input type="text" id="nombre" name="nombre" placeholder="Nome *" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" id="email" placeholder="Email *" required>
+                                <input type="email" id="email" name="email" placeholder="Email *" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <select id="servicio" required>
+                            <select id="servicio" name="servicio" required>
                                 <option value="">Seleziona un servizio</option>
                                 <option value="lezione">Lezione Privata</option>
                                 <option value="campo">Noleggio Campo</option>
@@ -361,13 +403,21 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea id="mensaje" placeholder="Messaggio *" required></textarea>
+                            <textarea id="mensaje" name="messaggio" placeholder="Messaggio *" required></textarea>
                         </div>
                         <button type="submit" class="submit-btn">
                             <i class="fas fa-paper-plane"></i>
                             <span>Invia Messaggio</span>
                         </button>
                     </form>
+                    <!-- Modal de éxito/error para el formulario de contacto -->
+                    <div id="formModal" class="modal" style="display:none;">
+                        <div class="modal-content">
+                            <span class="close" id="closeFormModal">&times;</span>
+                            <h2 id="formModalTitle">Messaggio inviato!</h2>
+                            <p id="formModalMsg">Grazie per averci contattato. Ti risponderemo al più presto.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
